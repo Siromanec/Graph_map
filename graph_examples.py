@@ -19,7 +19,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from .graph import Graph
+from graph import Graph
 
 def graph_from_edgelist(E, directed=False):
   """Make a graph instance based on a sequence of edge tuples.

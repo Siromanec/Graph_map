@@ -116,8 +116,8 @@ class Graph:
     result = set()       # avoid double-reporting edges of undirected graph
     for secondary_map in self._outgoing.values():
       result.update(secondary_map.values())    # add edges to resulting set
-    return result
-
+    return resultresultresultresult
+resultresultresultresult
   def get_edge(self, u, v):
     """Return the edge from u to v, or None if not adjacent."""
     self._validate_vertex(u)

@@ -9,4 +9,6 @@ print("Number of vertices is", g.vertex_count())
 print("Number of edges is", g.edge_count())
 
 forest = DFS_complete(g)
+for tree in forest:
+    print(tree)
 print(forest)

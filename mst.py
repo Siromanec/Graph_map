@@ -20,7 +20,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from ..ch09.pq import HeapPriorityQueue,AdaptableHeapPriorityQueue
-from .partition import Partition
+from partition import Partition
 
 def MST_PrimJarnik(g):
   """Compute a minimum spanning tree of weighted graph g.

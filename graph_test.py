@@ -1,9 +1,10 @@
+
 from graph import Graph
 
 graph_1 = Graph()
 
-graph_1.insert_vertex('A')
-graph_1.insert_vertex('B')
+a = graph_1.insert_vertex('A')
+b = graph_1.insert_vertex('B')
 c = graph_1.insert_vertex('C')
 d = graph_1.insert_vertex('D')
 
