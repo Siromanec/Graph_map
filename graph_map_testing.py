@@ -1,7 +1,6 @@
 from __future__ import annotations
 from graph import Graph
 import re
-from graph_examples import figure_14_11 as example
 from dfs import DFS
 from dfs import DFS_complete
 from bfs import BFS
