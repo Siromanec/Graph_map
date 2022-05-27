@@ -5,6 +5,7 @@ from dfs import DFS
 from dfs import DFS_complete
 from bfs import BFS
 from bfs import BFS_complete
+from topological_sort import topological_sort
 def read_file(file):
     info = {}
     with open(file, 'r') as file_contents:
@@ -53,9 +54,15 @@ def bfs_test(g):
     forest = BFS_complete(g)
     for tree in forest:
         print(tree, forest[tree])
+def topological_sort_test(g):
+    print("Number of vertices is", g.vertex_count())
+    print("Number of edges is", g.edge_count())
+    topo = topological_sort(g)
+    print("Topo order", [str(v) for v in topo])
 
 if __name__ == '__main__':
     info = read_file('stanford_cs.txt')
     g = turn_into_graph(info)
     dfs_test(g)
     bfs_test(g)
+    topological_sort_test(g)
