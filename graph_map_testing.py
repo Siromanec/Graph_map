@@ -1,9 +1,7 @@
 from __future__ import annotations
 from graph import Graph
 import re
-from dfs import DFS
 from dfs import DFS_complete
-from bfs import BFS
 from bfs import BFS_complete
 from topological_sort import topological_sort
 def read_file(file):
@@ -27,15 +25,12 @@ def turn_into_graph(info):
         name_to_object[child_node] = map_graph.insert_vertex(child_node)
     for child_node in info:
         for parent_node in info[child_node]:
-            print(parent_node, child_node)
             if parent_node:
                 map_graph.insert_edge(name_to_object[parent_node], name_to_object[child_node])
-    # for i in map_graph.vertices():
-    #     print(i)
+                #map_graph.insert_edge(name_to_object[child_node], name_to_object[parent_node])
 
-    # for i in map_graph.edges():
-    #     print(i)
     return map_graph
+
 def dfs_test(g):
     print([(i.endpoints()[0].element(), i.endpoints()[0].element()) for i in g.edges()])
     print("Number of vertices is", g.vertex_count())
@@ -43,8 +38,11 @@ def dfs_test(g):
     print("Number of edges is", g.edge_count())
 
     forest = DFS_complete(g)
-    for tree in forest:
-        print(tree, forest[tree])
+    print(forest)
+    print()
+    # for tree in forest:
+    #     print(tree, forest[tree])
+
 def bfs_test(g):
     print([(i.endpoints()[0].element(), i.endpoints()[0].element()) for i in g.edges()])
     print("Number of vertices is", g.vertex_count())
@@ -52,8 +50,12 @@ def bfs_test(g):
     print("Number of edges is", g.edge_count())
 
     forest = BFS_complete(g)
-    for tree in forest:
-        print(tree, forest[tree])
+    print(forest)
+    print()
+
+    # for tree in forest:
+    #     print(tree, forest[tree])
+
 def topological_sort_test(g):
     print("Number of vertices is", g.vertex_count())
     print("Number of edges is", g.edge_count())
